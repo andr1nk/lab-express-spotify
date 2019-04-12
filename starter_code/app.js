@@ -58,7 +58,6 @@ app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi.getArtistAlbums(artistId)
   .then(albumInfo => {
     const albumArray = albumInfo.body.items
-    console.log(albumArray)
     res.render('albums', {albumArray} );
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
@@ -72,6 +71,7 @@ app.get('/tracks/:tracks', (req, res, next) => {
   spotifyApi.getAlbumTracks(tracks)
   .then(trackInfo => {
     const trackArray = trackInfo.body.items
+    console.log(trackArray)
     res.render('tracks', {trackArray} );
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })

@@ -1,10 +1,10 @@
 
-  {{#each trackArray}}
 <figure>
-    <figcaption>Listen to the T-Rex:</figcaption>
+  {{#each trackArray}}
+    <figcaption>Listen to the song: {{this.name}}</figcaption>
     <audio
         controls
-        src="/media/examples/t-rex-roar.mp3">
+        src={{this.preview_url}}>
             Your browser does not support the
             <code>audio</code> element.
     </audio>
